@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DB_ProyectoFinalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TB_Carros">
+          <Key>
+            <PropertyRef Name="Carro_ID" />
+          </Key>
+          <Property Name="Carro_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Carro_Nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Carro_Anio" Type="int" Nullable="false" />
+          <Property Name="MarcaID_Carro" Type="int" Nullable="false" />
+          <Property Name="TipoMID_Carro" Type="int" Nullable="false" />
+          <Property Name="ProvID_Carro" Type="int" Nullable="false" />
+          <Property Name="ColorID_Carro" Type="int" Nullable="false" />
+          <Property Name="PaisID_Carro" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_Clientes">
+          <Key>
+            <PropertyRef Name="Cliente_ID" />
+          </Key>
+          <Property Name="Cliente_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cliente_Nombre" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="Cliente_Apellido" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="Cliente_Tel" Type="int" Nullable="false" />
+          <Property Name="Cliente_Nit" Type="int" Nullable="false" />
+          <Property Name="Cliente_Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_Colores">
+          <Key>
+            <PropertyRef Name="Color_ID" />
+          </Key>
+          <Property Name="Color_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Color_Nombre" Type="nvarchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_Compras">
+          <Key>
+            <PropertyRef Name="Compra_ID" />
+          </Key>
+          <Property Name="Compra_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Compra_Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Compra_Precio" Type="int" Nullable="false" />
+          <Property Name="Compra_IDEmpleado" Type="int" Nullable="false" />
+          <Property Name="ProvID_Compra" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_Departamentos">
+          <Key>
+            <PropertyRef Name="Depto_ID" />
+          </Key>
+          <Property Name="Depto_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Depto_Nombre" Type="nvarchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_Empleados">
+          <Key>
+            <PropertyRef Name="Empleado_ID" />
+          </Key>
+          <Property Name="Empleado_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Empleado_Nombre" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="Empleado_Apellido" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="Empleado_Tel" Type="int" Nullable="false" />
+          <Property Name="Empleado_Direccion" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="DeptoID_Empleado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_Marcas">
+          <Key>
+            <PropertyRef Name="Marca_ID" />
+          </Key>
+          <Property Name="Marca_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Marca_Nombre" Type="nvarchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_Paises">
+          <Key>
+            <PropertyRef Name="Pais_ID" />
+          </Key>
+          <Property Name="Pais_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Pais_Nombre" Type="nvarchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_Proveedores">
+          <Key>
+            <PropertyRef Name="Prov_ID" />
+          </Key>
+          <Property Name="Prov_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Prov_Nombre" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="Prov_Direccion" Type="nvarchar" MaxLength="75" Nullable="false" />
+          <Property Name="Prov_Tel" Type="int" Nullable="false" />
+          <Property Name="Prov_Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_TipoCarros">
+          <Key>
+            <PropertyRef Name="TipoC_ID" />
+          </Key>
+          <Property Name="TipoC_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TipoC_Nombre" Type="nvarchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_TipoMotores">
+          <Key>
+            <PropertyRef Name="TipoM_ID" />
+          </Key>
+          <Property Name="TipoM_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TipoM_Nombre" Type="nvarchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_Usuarios">
+          <Key>
+            <PropertyRef Name="Usuario_ID" />
+          </Key>
+          <Property Name="Usuario_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Usuario_Nombre" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="Usuario_Pass" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="EmpleadoID_Usuario" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_Ventas">
+          <Key>
+            <PropertyRef Name="Venta_ID" />
+          </Key>
+          <Property Name="Venta_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Venta_NoFact" Type="int" Nullable="false" />
+          <Property Name="ClienteID_Venta" Type="int" Nullable="false" />
+          <Property Name="Venta_NIT" Type="int" Nullable="false" />
+          <Property Name="Venta_Precio" Type="int" Nullable="false" />
+          <Property Name="CarroID_Venta" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_CarroIDVenta">
+          <End Role="TB_Carros" Type="Self.TB_Carros" Multiplicity="1" />
+          <End Role="TB_Ventas" Type="Self.TB_Ventas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Carros">
+              <PropertyRef Name="Carro_ID" />
+            </Principal>
+            <Dependent Role="TB_Ventas">
+              <PropertyRef Name="CarroID_Venta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClienteIDVenta">
+          <End Role="TB_Clientes" Type="Self.TB_Clientes" Multiplicity="1" />
+          <End Role="TB_Ventas" Type="Self.TB_Ventas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Clientes">
+              <PropertyRef Name="Cliente_ID" />
+            </Principal>
+            <Dependent Role="TB_Ventas">
+              <PropertyRef Name="ClienteID_Venta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ColorIDCarro">
+          <End Role="TB_Colores" Type="Self.TB_Colores" Multiplicity="1" />
+          <End Role="TB_Carros" Type="Self.TB_Carros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Colores">
+              <PropertyRef Name="Color_ID" />
+            </Principal>
+            <Dependent Role="TB_Carros">
+              <PropertyRef Name="ColorID_Carro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeptoIDEmpleado">
+          <End Role="TB_Departamentos" Type="Self.TB_Departamentos" Multiplicity="1" />
+          <End Role="TB_Empleados" Type="Self.TB_Empleados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Departamentos">
+              <PropertyRef Name="Depto_ID" />
+            </Principal>
+            <Dependent Role="TB_Empleados">
+              <PropertyRef Name="DeptoID_Empleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmpIDCompra">
+          <End Role="TB_Empleados" Type="Self.TB_Empleados" Multiplicity="1" />
+          <End Role="TB_Compras" Type="Self.TB_Compras" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Empleados">
+              <PropertyRef Name="Empleado_ID" />
+            </Principal>
+            <Dependent Role="TB_Compras">
+              <PropertyRef Name="Compra_IDEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmpleadoIDUser">
+          <End Role="TB_Empleados" Type="Self.TB_Empleados" Multiplicity="1" />
+          <End Role="TB_Usuarios" Type="Self.TB_Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Empleados">
+              <PropertyRef Name="Empleado_ID" />
+            </Principal>
+            <Dependent Role="TB_Usuarios">
+              <PropertyRef Name="EmpleadoID_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MarcaIDCarro">
+          <End Role="TB_Marcas" Type="Self.TB_Marcas" Multiplicity="1" />
+          <End Role="TB_Carros" Type="Self.TB_Carros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Marcas">
+              <PropertyRef Name="Marca_ID" />
+            </Principal>
+            <Dependent Role="TB_Carros">
+              <PropertyRef Name="MarcaID_Carro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PaisIDCarro">
+          <End Role="TB_Paises" Type="Self.TB_Paises" Multiplicity="1" />
+          <End Role="TB_Carros" Type="Self.TB_Carros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Paises">
+              <PropertyRef Name="Pais_ID" />
+            </Principal>
+            <Dependent Role="TB_Carros">
+              <PropertyRef Name="PaisID_Carro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProvIDCarro">
+          <End Role="TB_Proveedores" Type="Self.TB_Proveedores" Multiplicity="1" />
+          <End Role="TB_Carros" Type="Self.TB_Carros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Proveedores">
+              <PropertyRef Name="Prov_ID" />
+            </Principal>
+            <Dependent Role="TB_Carros">
+              <PropertyRef Name="ProvID_Carro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProvIDCompra">
+          <End Role="TB_Proveedores" Type="Self.TB_Proveedores" Multiplicity="1" />
+          <End Role="TB_Compras" Type="Self.TB_Compras" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Proveedores">
+              <PropertyRef Name="Prov_ID" />
+            </Principal>
+            <Dependent Role="TB_Compras">
+              <PropertyRef Name="ProvID_Compra" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoMCarro">
+          <End Role="TB_TipoMotores" Type="Self.TB_TipoMotores" Multiplicity="1" />
+          <End Role="TB_Carros" Type="Self.TB_Carros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_TipoMotores">
+              <PropertyRef Name="TipoM_ID" />
+            </Principal>
+            <Dependent Role="TB_Carros">
+              <PropertyRef Name="TipoMID_Carro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_ProyectoFinalModelStoreContainer">
+          <EntitySet Name="TB_Carros" EntityType="Self.TB_Carros" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Clientes" EntityType="Self.TB_Clientes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Colores" EntityType="Self.TB_Colores" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Compras" EntityType="Self.TB_Compras" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Departamentos" EntityType="Self.TB_Departamentos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Empleados" EntityType="Self.TB_Empleados" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Marcas" EntityType="Self.TB_Marcas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Paises" EntityType="Self.TB_Paises" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Proveedores" EntityType="Self.TB_Proveedores" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_TipoCarros" EntityType="Self.TB_TipoCarros" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_TipoMotores" EntityType="Self.TB_TipoMotores" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Usuarios" EntityType="Self.TB_Usuarios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Ventas" EntityType="Self.TB_Ventas" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CarroIDVenta" Association="Self.FK_CarroIDVenta">
+            <End Role="TB_Carros" EntitySet="TB_Carros" />
+            <End Role="TB_Ventas" EntitySet="TB_Ventas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClienteIDVenta" Association="Self.FK_ClienteIDVenta">
+            <End Role="TB_Clientes" EntitySet="TB_Clientes" />
+            <End Role="TB_Ventas" EntitySet="TB_Ventas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ColorIDCarro" Association="Self.FK_ColorIDCarro">
+            <End Role="TB_Colores" EntitySet="TB_Colores" />
+            <End Role="TB_Carros" EntitySet="TB_Carros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeptoIDEmpleado" Association="Self.FK_DeptoIDEmpleado">
+            <End Role="TB_Departamentos" EntitySet="TB_Departamentos" />
+            <End Role="TB_Empleados" EntitySet="TB_Empleados" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmpIDCompra" Association="Self.FK_EmpIDCompra">
+            <End Role="TB_Empleados" EntitySet="TB_Empleados" />
+            <End Role="TB_Compras" EntitySet="TB_Compras" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmpleadoIDUser" Association="Self.FK_EmpleadoIDUser">
+            <End Role="TB_Empleados" EntitySet="TB_Empleados" />
+            <End Role="TB_Usuarios" EntitySet="TB_Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MarcaIDCarro" Association="Self.FK_MarcaIDCarro">
+            <End Role="TB_Marcas" EntitySet="TB_Marcas" />
+            <End Role="TB_Carros" EntitySet="TB_Carros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PaisIDCarro" Association="Self.FK_PaisIDCarro">
+            <End Role="TB_Paises" EntitySet="TB_Paises" />
+            <End Role="TB_Carros" EntitySet="TB_Carros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProvIDCarro" Association="Self.FK_ProvIDCarro">
+            <End Role="TB_Proveedores" EntitySet="TB_Proveedores" />
+            <End Role="TB_Carros" EntitySet="TB_Carros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProvIDCompra" Association="Self.FK_ProvIDCompra">
+            <End Role="TB_Proveedores" EntitySet="TB_Proveedores" />
+            <End Role="TB_Compras" EntitySet="TB_Compras" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoMCarro" Association="Self.FK_TipoMCarro">
+            <End Role="TB_TipoMotores" EntitySet="TB_TipoMotores" />
+            <End Role="TB_Carros" EntitySet="TB_Carros" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_ProyectoFinalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TB_Carros">
+          <Key>
+            <PropertyRef Name="Carro_ID" />
+          </Key>
+          <Property Name="Carro_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Carro_Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Carro_Anio" Type="Int32" Nullable="false" />
+          <Property Name="MarcaID_Carro" Type="Int32" Nullable="false" />
+          <Property Name="TipoMID_Carro" Type="Int32" Nullable="false" />
+          <Property Name="ProvID_Carro" Type="Int32" Nullable="false" />
+          <Property Name="ColorID_Carro" Type="Int32" Nullable="false" />
+          <Property Name="PaisID_Carro" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TB_Ventas" Relationship="Self.FK_CarroIDVenta" FromRole="TB_Carros" ToRole="TB_Ventas" />
+          <NavigationProperty Name="TB_Colores" Relationship="Self.FK_ColorIDCarro" FromRole="TB_Carros" ToRole="TB_Colores" />
+          <NavigationProperty Name="TB_Marcas" Relationship="Self.FK_MarcaIDCarro" FromRole="TB_Carros" ToRole="TB_Marcas" />
+          <NavigationProperty Name="TB_Paises" Relationship="Self.FK_PaisIDCarro" FromRole="TB_Carros" ToRole="TB_Paises" />
+          <NavigationProperty Name="TB_Proveedores" Relationship="Self.FK_ProvIDCarro" FromRole="TB_Carros" ToRole="TB_Proveedores" />
+          <NavigationProperty Name="TB_TipoMotores" Relationship="Self.FK_TipoMCarro" FromRole="TB_Carros" ToRole="TB_TipoMotores" />
+        </EntityType>
+        <EntityType Name="TB_Clientes">
+          <Key>
+            <PropertyRef Name="Cliente_ID" />
+          </Key>
+          <Property Name="Cliente_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cliente_Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Cliente_Apellido" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Cliente_Tel" Type="Int32" Nullable="false" />
+          <Property Name="Cliente_Nit" Type="Int32" Nullable="false" />
+          <Property Name="Cliente_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="TB_Ventas" Relationship="Self.FK_ClienteIDVenta" FromRole="TB_Clientes" ToRole="TB_Ventas" />
+        </EntityType>
+        <EntityType Name="TB_Colores">
+          <Key>
+            <PropertyRef Name="Color_ID" />
+          </Key>
+          <Property Name="Color_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Color_Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="TB_Carros" Relationship="Self.FK_ColorIDCarro" FromRole="TB_Colores" ToRole="TB_Carros" />
+        </EntityType>
+        <EntityType Name="TB_Compras">
+          <Key>
+            <PropertyRef Name="Compra_ID" />
+          </Key>
+          <Property Name="Compra_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Compra_Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Compra_Precio" Type="Int32" Nullable="false" />
+          <Property Name="Compra_IDEmpleado" Type="Int32" Nullable="false" />
+          <Property Name="ProvID_Compra" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TB_Empleados" Relationship="Self.FK_EmpIDCompra" FromRole="TB_Compras" ToRole="TB_Empleados" />
+          <NavigationProperty Name="TB_Proveedores" Relationship="Self.FK_ProvIDCompra" FromRole="TB_Compras" ToRole="TB_Proveedores" />
+        </EntityType>
+        <EntityType Name="TB_Departamentos">
+          <Key>
+            <PropertyRef Name="Depto_ID" />
+          </Key>
+          <Property Name="Depto_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Depto_Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="TB_Empleados" Relationship="Self.FK_DeptoIDEmpleado" FromRole="TB_Departamentos" ToRole="TB_Empleados" />
+        </EntityType>
+        <EntityType Name="TB_Empleados">
+          <Key>
+            <PropertyRef Name="Empleado_ID" />
+          </Key>
+          <Property Name="Empleado_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Empleado_Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Empleado_Apellido" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Empleado_Tel" Type="Int32" Nullable="false" />
+          <Property Name="Empleado_Direccion" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DeptoID_Empleado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TB_Compras" Relationship="Self.FK_EmpIDCompra" FromRole="TB_Empleados" ToRole="TB_Compras" />
+          <NavigationProperty Name="TB_Departamentos" Relationship="Self.FK_DeptoIDEmpleado" FromRole="TB_Empleados" ToRole="TB_Departamentos" />
+          <NavigationProperty Name="TB_Usuarios" Relationship="Self.FK_EmpleadoIDUser" FromRole="TB_Empleados" ToRole="TB_Usuarios" />
+        </EntityType>
+        <EntityType Name="TB_Marcas">
+          <Key>
+            <PropertyRef Name="Marca_ID" />
+          </Key>
+          <Property Name="Marca_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Marca_Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="TB_Carros" Relationship="Self.FK_MarcaIDCarro" FromRole="TB_Marcas" ToRole="TB_Carros" />
+        </EntityType>
+        <EntityType Name="TB_Paises">
+          <Key>
+            <PropertyRef Name="Pais_ID" />
+          </Key>
+          <Property Name="Pais_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Pais_Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="TB_Carros" Relationship="Self.FK_PaisIDCarro" FromRole="TB_Paises" ToRole="TB_Carros" />
+        </EntityType>
+        <EntityType Name="TB_Proveedores">
+          <Key>
+            <PropertyRef Name="Prov_ID" />
+          </Key>
+          <Property Name="Prov_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Prov_Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Prov_Direccion" Type="String" MaxLength="75" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Prov_Tel" Type="Int32" Nullable="false" />
+          <Property Name="Prov_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="TB_Carros" Relationship="Self.FK_ProvIDCarro" FromRole="TB_Proveedores" ToRole="TB_Carros" />
+          <NavigationProperty Name="TB_Compras" Relationship="Self.FK_ProvIDCompra" FromRole="TB_Proveedores" ToRole="TB_Compras" />
+        </EntityType>
+        <EntityType Name="TB_TipoCarros">
+          <Key>
+            <PropertyRef Name="TipoC_ID" />
+          </Key>
+          <Property Name="TipoC_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TipoC_Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_TipoMotores">
+          <Key>
+            <PropertyRef Name="TipoM_ID" />
+          </Key>
+          <Property Name="TipoM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TipoM_Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="TB_Carros" Relationship="Self.FK_TipoMCarro" FromRole="TB_TipoMotores" ToRole="TB_Carros" />
+        </EntityType>
+        <EntityType Name="TB_Usuarios">
+          <Key>
+            <PropertyRef Name="Usuario_ID" />
+          </Key>
+          <Property Name="Usuario_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Usuario_Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Usuario_Pass" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmpleadoID_Usuario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TB_Empleados" Relationship="Self.FK_EmpleadoIDUser" FromRole="TB_Usuarios" ToRole="TB_Empleados" />
+        </EntityType>
+        <EntityType Name="TB_Ventas">
+          <Key>
+            <PropertyRef Name="Venta_ID" />
+          </Key>
+          <Property Name="Venta_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Venta_NoFact" Type="Int32" Nullable="false" />
+          <Property Name="ClienteID_Venta" Type="Int32" Nullable="false" />
+          <Property Name="Venta_NIT" Type="Int32" Nullable="false" />
+          <Property Name="Venta_Precio" Type="Int32" Nullable="false" />
+          <Property Name="CarroID_Venta" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TB_Carros" Relationship="Self.FK_CarroIDVenta" FromRole="TB_Ventas" ToRole="TB_Carros" />
+          <NavigationProperty Name="TB_Clientes" Relationship="Self.FK_ClienteIDVenta" FromRole="TB_Ventas" ToRole="TB_Clientes" />
+        </EntityType>
+        <Association Name="FK_CarroIDVenta">
+          <End Role="TB_Carros" Type="Self.TB_Carros" Multiplicity="1" />
+          <End Role="TB_Ventas" Type="Self.TB_Ventas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Carros">
+              <PropertyRef Name="Carro_ID" />
+            </Principal>
+            <Dependent Role="TB_Ventas">
+              <PropertyRef Name="CarroID_Venta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ColorIDCarro">
+          <End Role="TB_Colores" Type="Self.TB_Colores" Multiplicity="1" />
+          <End Role="TB_Carros" Type="Self.TB_Carros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Colores">
+              <PropertyRef Name="Color_ID" />
+            </Principal>
+            <Dependent Role="TB_Carros">
+              <PropertyRef Name="ColorID_Carro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MarcaIDCarro">
+          <End Role="TB_Marcas" Type="Self.TB_Marcas" Multiplicity="1" />
+          <End Role="TB_Carros" Type="Self.TB_Carros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Marcas">
+              <PropertyRef Name="Marca_ID" />
+            </Principal>
+            <Dependent Role="TB_Carros">
+              <PropertyRef Name="MarcaID_Carro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PaisIDCarro">
+          <End Role="TB_Paises" Type="Self.TB_Paises" Multiplicity="1" />
+          <End Role="TB_Carros" Type="Self.TB_Carros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Paises">
+              <PropertyRef Name="Pais_ID" />
+            </Principal>
+            <Dependent Role="TB_Carros">
+              <PropertyRef Name="PaisID_Carro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProvIDCarro">
+          <End Role="TB_Proveedores" Type="Self.TB_Proveedores" Multiplicity="1" />
+          <End Role="TB_Carros" Type="Self.TB_Carros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Proveedores">
+              <PropertyRef Name="Prov_ID" />
+            </Principal>
+            <Dependent Role="TB_Carros">
+              <PropertyRef Name="ProvID_Carro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoMCarro">
+          <End Role="TB_TipoMotores" Type="Self.TB_TipoMotores" Multiplicity="1" />
+          <End Role="TB_Carros" Type="Self.TB_Carros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_TipoMotores">
+              <PropertyRef Name="TipoM_ID" />
+            </Principal>
+            <Dependent Role="TB_Carros">
+              <PropertyRef Name="TipoMID_Carro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClienteIDVenta">
+          <End Role="TB_Clientes" Type="Self.TB_Clientes" Multiplicity="1" />
+          <End Role="TB_Ventas" Type="Self.TB_Ventas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Clientes">
+              <PropertyRef Name="Cliente_ID" />
+            </Principal>
+            <Dependent Role="TB_Ventas">
+              <PropertyRef Name="ClienteID_Venta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmpIDCompra">
+          <End Role="TB_Empleados" Type="Self.TB_Empleados" Multiplicity="1" />
+          <End Role="TB_Compras" Type="Self.TB_Compras" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Empleados">
+              <PropertyRef Name="Empleado_ID" />
+            </Principal>
+            <Dependent Role="TB_Compras">
+              <PropertyRef Name="Compra_IDEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProvIDCompra">
+          <End Role="TB_Proveedores" Type="Self.TB_Proveedores" Multiplicity="1" />
+          <End Role="TB_Compras" Type="Self.TB_Compras" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Proveedores">
+              <PropertyRef Name="Prov_ID" />
+            </Principal>
+            <Dependent Role="TB_Compras">
+              <PropertyRef Name="ProvID_Compra" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeptoIDEmpleado">
+          <End Role="TB_Departamentos" Type="Self.TB_Departamentos" Multiplicity="1" />
+          <End Role="TB_Empleados" Type="Self.TB_Empleados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Departamentos">
+              <PropertyRef Name="Depto_ID" />
+            </Principal>
+            <Dependent Role="TB_Empleados">
+              <PropertyRef Name="DeptoID_Empleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmpleadoIDUser">
+          <End Role="TB_Empleados" Type="Self.TB_Empleados" Multiplicity="1" />
+          <End Role="TB_Usuarios" Type="Self.TB_Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Empleados">
+              <PropertyRef Name="Empleado_ID" />
+            </Principal>
+            <Dependent Role="TB_Usuarios">
+              <PropertyRef Name="EmpleadoID_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_ProyectoFinalEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TB_Carros" EntityType="Self.TB_Carros" />
+          <EntitySet Name="TB_Clientes" EntityType="Self.TB_Clientes" />
+          <EntitySet Name="TB_Colores" EntityType="Self.TB_Colores" />
+          <EntitySet Name="TB_Compras" EntityType="Self.TB_Compras" />
+          <EntitySet Name="TB_Departamentos" EntityType="Self.TB_Departamentos" />
+          <EntitySet Name="TB_Empleados" EntityType="Self.TB_Empleados" />
+          <EntitySet Name="TB_Marcas" EntityType="Self.TB_Marcas" />
+          <EntitySet Name="TB_Paises" EntityType="Self.TB_Paises" />
+          <EntitySet Name="TB_Proveedores" EntityType="Self.TB_Proveedores" />
+          <EntitySet Name="TB_TipoCarros" EntityType="Self.TB_TipoCarros" />
+          <EntitySet Name="TB_TipoMotores" EntityType="Self.TB_TipoMotores" />
+          <EntitySet Name="TB_Usuarios" EntityType="Self.TB_Usuarios" />
+          <EntitySet Name="TB_Ventas" EntityType="Self.TB_Ventas" />
+          <AssociationSet Name="FK_CarroIDVenta" Association="Self.FK_CarroIDVenta">
+            <End Role="TB_Carros" EntitySet="TB_Carros" />
+            <End Role="TB_Ventas" EntitySet="TB_Ventas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ColorIDCarro" Association="Self.FK_ColorIDCarro">
+            <End Role="TB_Colores" EntitySet="TB_Colores" />
+            <End Role="TB_Carros" EntitySet="TB_Carros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MarcaIDCarro" Association="Self.FK_MarcaIDCarro">
+            <End Role="TB_Marcas" EntitySet="TB_Marcas" />
+            <End Role="TB_Carros" EntitySet="TB_Carros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PaisIDCarro" Association="Self.FK_PaisIDCarro">
+            <End Role="TB_Paises" EntitySet="TB_Paises" />
+            <End Role="TB_Carros" EntitySet="TB_Carros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProvIDCarro" Association="Self.FK_ProvIDCarro">
+            <End Role="TB_Proveedores" EntitySet="TB_Proveedores" />
+            <End Role="TB_Carros" EntitySet="TB_Carros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoMCarro" Association="Self.FK_TipoMCarro">
+            <End Role="TB_TipoMotores" EntitySet="TB_TipoMotores" />
+            <End Role="TB_Carros" EntitySet="TB_Carros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClienteIDVenta" Association="Self.FK_ClienteIDVenta">
+            <End Role="TB_Clientes" EntitySet="TB_Clientes" />
+            <End Role="TB_Ventas" EntitySet="TB_Ventas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmpIDCompra" Association="Self.FK_EmpIDCompra">
+            <End Role="TB_Empleados" EntitySet="TB_Empleados" />
+            <End Role="TB_Compras" EntitySet="TB_Compras" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProvIDCompra" Association="Self.FK_ProvIDCompra">
+            <End Role="TB_Proveedores" EntitySet="TB_Proveedores" />
+            <End Role="TB_Compras" EntitySet="TB_Compras" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeptoIDEmpleado" Association="Self.FK_DeptoIDEmpleado">
+            <End Role="TB_Departamentos" EntitySet="TB_Departamentos" />
+            <End Role="TB_Empleados" EntitySet="TB_Empleados" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmpleadoIDUser" Association="Self.FK_EmpleadoIDUser">
+            <End Role="TB_Empleados" EntitySet="TB_Empleados" />
+            <End Role="TB_Usuarios" EntitySet="TB_Usuarios" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_ProyectoFinalModelStoreContainer" CdmEntityContainer="DB_ProyectoFinalEntities">
+          <EntitySetMapping Name="TB_Carros">
+            <EntityTypeMapping TypeName="DB_ProyectoFinalModel.TB_Carros">
+              <MappingFragment StoreEntitySet="TB_Carros">
+                <ScalarProperty Name="Carro_ID" ColumnName="Carro_ID" />
+                <ScalarProperty Name="Carro_Nombre" ColumnName="Carro_Nombre" />
+                <ScalarProperty Name="Carro_Anio" ColumnName="Carro_Anio" />
+                <ScalarProperty Name="MarcaID_Carro" ColumnName="MarcaID_Carro" />
+                <ScalarProperty Name="TipoMID_Carro" ColumnName="TipoMID_Carro" />
+                <ScalarProperty Name="ProvID_Carro" ColumnName="ProvID_Carro" />
+                <ScalarProperty Name="ColorID_Carro" ColumnName="ColorID_Carro" />
+                <ScalarProperty Name="PaisID_Carro" ColumnName="PaisID_Carro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Clientes">
+            <EntityTypeMapping TypeName="DB_ProyectoFinalModel.TB_Clientes">
+              <MappingFragment StoreEntitySet="TB_Clientes">
+                <ScalarProperty Name="Cliente_ID" ColumnName="Cliente_ID" />
+                <ScalarProperty Name="Cliente_Nombre" ColumnName="Cliente_Nombre" />
+                <ScalarProperty Name="Cliente_Apellido" ColumnName="Cliente_Apellido" />
+                <ScalarProperty Name="Cliente_Tel" ColumnName="Cliente_Tel" />
+                <ScalarProperty Name="Cliente_Nit" ColumnName="Cliente_Nit" />
+                <ScalarProperty Name="Cliente_Email" ColumnName="Cliente_Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Colores">
+            <EntityTypeMapping TypeName="DB_ProyectoFinalModel.TB_Colores">
+              <MappingFragment StoreEntitySet="TB_Colores">
+                <ScalarProperty Name="Color_ID" ColumnName="Color_ID" />
+                <ScalarProperty Name="Color_Nombre" ColumnName="Color_Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Compras">
+            <EntityTypeMapping TypeName="DB_ProyectoFinalModel.TB_Compras">
+              <MappingFragment StoreEntitySet="TB_Compras">
+                <ScalarProperty Name="Compra_ID" ColumnName="Compra_ID" />
+                <ScalarProperty Name="Compra_Nombre" ColumnName="Compra_Nombre" />
+                <ScalarProperty Name="Compra_Precio" ColumnName="Compra_Precio" />
+                <ScalarProperty Name="Compra_IDEmpleado" ColumnName="Compra_IDEmpleado" />
+                <ScalarProperty Name="ProvID_Compra" ColumnName="ProvID_Compra" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Departamentos">
+            <EntityTypeMapping TypeName="DB_ProyectoFinalModel.TB_Departamentos">
+              <MappingFragment StoreEntitySet="TB_Departamentos">
+                <ScalarProperty Name="Depto_ID" ColumnName="Depto_ID" />
+                <ScalarProperty Name="Depto_Nombre" ColumnName="Depto_Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Empleados">
+            <EntityTypeMapping TypeName="DB_ProyectoFinalModel.TB_Empleados">
+              <MappingFragment StoreEntitySet="TB_Empleados">
+                <ScalarProperty Name="Empleado_ID" ColumnName="Empleado_ID" />
+                <ScalarProperty Name="Empleado_Nombre" ColumnName="Empleado_Nombre" />
+                <ScalarProperty Name="Empleado_Apellido" ColumnName="Empleado_Apellido" />
+                <ScalarProperty Name="Empleado_Tel" ColumnName="Empleado_Tel" />
+                <ScalarProperty Name="Empleado_Direccion" ColumnName="Empleado_Direccion" />
+                <ScalarProperty Name="DeptoID_Empleado" ColumnName="DeptoID_Empleado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Marcas">
+            <EntityTypeMapping TypeName="DB_ProyectoFinalModel.TB_Marcas">
+              <MappingFragment StoreEntitySet="TB_Marcas">
+                <ScalarProperty Name="Marca_ID" ColumnName="Marca_ID" />
+                <ScalarProperty Name="Marca_Nombre" ColumnName="Marca_Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Paises">
+            <EntityTypeMapping TypeName="DB_ProyectoFinalModel.TB_Paises">
+              <MappingFragment StoreEntitySet="TB_Paises">
+                <ScalarProperty Name="Pais_ID" ColumnName="Pais_ID" />
+                <ScalarProperty Name="Pais_Nombre" ColumnName="Pais_Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Proveedores">
+            <EntityTypeMapping TypeName="DB_ProyectoFinalModel.TB_Proveedores">
+              <MappingFragment StoreEntitySet="TB_Proveedores">
+                <ScalarProperty Name="Prov_ID" ColumnName="Prov_ID" />
+                <ScalarProperty Name="Prov_Nombre" ColumnName="Prov_Nombre" />
+                <ScalarProperty Name="Prov_Direccion" ColumnName="Prov_Direccion" />
+                <ScalarProperty Name="Prov_Tel" ColumnName="Prov_Tel" />
+                <ScalarProperty Name="Prov_Email" ColumnName="Prov_Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_TipoCarros">
+            <EntityTypeMapping TypeName="DB_ProyectoFinalModel.TB_TipoCarros">
+              <MappingFragment StoreEntitySet="TB_TipoCarros">
+                <ScalarProperty Name="TipoC_ID" ColumnName="TipoC_ID" />
+                <ScalarProperty Name="TipoC_Nombre" ColumnName="TipoC_Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_TipoMotores">
+            <EntityTypeMapping TypeName="DB_ProyectoFinalModel.TB_TipoMotores">
+              <MappingFragment StoreEntitySet="TB_TipoMotores">
+                <ScalarProperty Name="TipoM_ID" ColumnName="TipoM_ID" />
+                <ScalarProperty Name="TipoM_Nombre" ColumnName="TipoM_Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Usuarios">
+            <EntityTypeMapping TypeName="DB_ProyectoFinalModel.TB_Usuarios">
+              <MappingFragment StoreEntitySet="TB_Usuarios">
+                <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+                <ScalarProperty Name="Usuario_Nombre" ColumnName="Usuario_Nombre" />
+                <ScalarProperty Name="Usuario_Pass" ColumnName="Usuario_Pass" />
+                <ScalarProperty Name="EmpleadoID_Usuario" ColumnName="EmpleadoID_Usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Ventas">
+            <EntityTypeMapping TypeName="DB_ProyectoFinalModel.TB_Ventas">
+              <MappingFragment StoreEntitySet="TB_Ventas">
+                <ScalarProperty Name="Venta_ID" ColumnName="Venta_ID" />
+                <ScalarProperty Name="Venta_NoFact" ColumnName="Venta_NoFact" />
+                <ScalarProperty Name="ClienteID_Venta" ColumnName="ClienteID_Venta" />
+                <ScalarProperty Name="Venta_NIT" ColumnName="Venta_NIT" />
+                <ScalarProperty Name="Venta_Precio" ColumnName="Venta_Precio" />
+                <ScalarProperty Name="CarroID_Venta" ColumnName="CarroID_Venta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

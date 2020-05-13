@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5c4c6df270434d6d812cd6b88c2572df" Name="Diagram1" ZoomLevel="88">
+        <EntityTypeShape EntityType="DB_ProyectoFinalModel.TB_Carros" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_ProyectoFinalModel.TB_Clientes" Width="1.5" PointX="6" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_ProyectoFinalModel.TB_Colores" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_ProyectoFinalModel.TB_Compras" Width="1.5" PointX="6" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_ProyectoFinalModel.TB_Departamentos" Width="1.5" PointX="1.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_ProyectoFinalModel.TB_Empleados" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_ProyectoFinalModel.TB_Marcas" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_ProyectoFinalModel.TB_Paises" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_ProyectoFinalModel.TB_Proveedores" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_ProyectoFinalModel.TB_TipoCarros" Width="1.5" PointX="2.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_ProyectoFinalModel.TB_TipoMotores" Width="1.5" PointX="0.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_ProyectoFinalModel.TB_Usuarios" Width="1.5" PointX="6" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_ProyectoFinalModel.TB_Ventas" Width="1.5" PointX="8.25" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="DB_ProyectoFinalModel.FK_CarroIDVenta" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_ProyectoFinalModel.FK_ColorIDCarro" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_ProyectoFinalModel.FK_MarcaIDCarro" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_ProyectoFinalModel.FK_PaisIDCarro" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_ProyectoFinalModel.FK_ProvIDCarro" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_ProyectoFinalModel.FK_TipoMCarro" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_ProyectoFinalModel.FK_ClienteIDVenta" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_ProyectoFinalModel.FK_EmpIDCompra" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_ProyectoFinalModel.FK_ProvIDCompra" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_ProyectoFinalModel.FK_DeptoIDEmpleado" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_ProyectoFinalModel.FK_EmpleadoIDUser" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
