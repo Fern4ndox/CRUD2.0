@@ -126,6 +126,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CarroController.cs" />
+    <Compile Include="Models\ViewModels\CarroViewModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -184,13 +186,19 @@
     <Compile Include="Models\TB_Ventas.cs">
       <DependentUpon>DB_ProyectoF.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModels\ListarCarro.cs" />
+    <Compile Include="Models\ViewModels\ListarClientes.cs" />
+    <Compile Include="Models\ViewModels\ListarColores.cs" />
+    <Compile Include="Models\ViewModels\ListarCompras.cs" />
     <Compile Include="Models\ViewModels\ListarDepartamento.cs" />
     <Compile Include="Models\ViewModels\ListarEmpleados.cs" />
     <Compile Include="Models\ViewModels\ListarMarca.cs" />
+    <Compile Include="Models\ViewModels\ListarPaises.cs" />
     <Compile Include="Models\ViewModels\ListarProveedor.cs" />
     <Compile Include="Models\ViewModels\ListarTipoCarro.cs" />
     <Compile Include="Models\ViewModels\ListarTipoMotores.cs" />
     <Compile Include="Models\ViewModels\ListarUsuarios.cs" />
+    <Compile Include="Models\ViewModels\ListarVentas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -247,6 +255,8 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\LayOne.cshtml" />
+    <Content Include="Views\Carro\Index.cshtml" />
+    <Content Include="Views\Carro\Nuevo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

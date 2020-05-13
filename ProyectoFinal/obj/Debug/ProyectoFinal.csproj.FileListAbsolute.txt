@@ -79,8 +79,10 @@ C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\bin\es\System.Web.Ra
 C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\bin\es\System.Web.WebPages.resources.dll
 C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csprojAssemblyReference.cache
 C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CoreCompileInputs.cache
 C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CopyComplete
 C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.dll
 C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
+C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\bin\EntityFramework.dll
+C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\bin\EntityFramework.xml
+C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csprojAssemblyReference.cache
