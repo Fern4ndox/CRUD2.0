@@ -85,6 +85,6 @@ C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFi
 C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
 C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\bin\EntityFramework.dll
 C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\bin\EntityFramework.xml
-C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csprojAssemblyReference.cache
 C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\bin\EntityFramework.SqlServer.dll
 C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\bin\EntityFramework.SqlServer.xml
+C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csprojAssemblyReference.cache

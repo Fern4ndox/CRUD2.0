@@ -129,6 +129,18 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CarroController.cs" />
+    <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\ColoresController.cs" />
+    <Compile Include="Controllers\ComprasController.cs" />
+    <Compile Include="Controllers\DeptosController.cs" />
+    <Compile Include="Controllers\EmpleadosController.cs" />
+    <Compile Include="Controllers\MarcasController.cs" />
+    <Compile Include="Controllers\PaisesController.cs" />
+    <Compile Include="Controllers\ProveedoresController.cs" />
+    <Compile Include="Controllers\TipoCarroController.cs" />
+    <Compile Include="Controllers\TipoMotorController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
+    <Compile Include="Controllers\VentasController.cs" />
     <Compile Include="Models\ViewModels\CarroViewModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -188,6 +200,11 @@
     <Compile Include="Models\TB_Ventas.cs">
       <DependentUpon>DB_ProyectoF.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModels\ClienteViewModel.cs" />
+    <Compile Include="Models\ViewModels\ColorViewModel.cs" />
+    <Compile Include="Models\ViewModels\CompraViewModel.cs" />
+    <Compile Include="Models\ViewModels\DeptoViewModel.cs" />
+    <Compile Include="Models\ViewModels\EmpleadoViewModel.cs" />
     <Compile Include="Models\ViewModels\ListarCarro.cs" />
     <Compile Include="Models\ViewModels\ListarClientes.cs" />
     <Compile Include="Models\ViewModels\ListarColores.cs" />
@@ -201,6 +218,12 @@
     <Compile Include="Models\ViewModels\ListarTipoMotores.cs" />
     <Compile Include="Models\ViewModels\ListarUsuarios.cs" />
     <Compile Include="Models\ViewModels\ListarVentas.cs" />
+    <Compile Include="Models\ViewModels\MarcaViewModel.cs" />
+    <Compile Include="Models\ViewModels\PaisViewModel.cs" />
+    <Compile Include="Models\ViewModels\ProveedorViewModel.cs" />
+    <Compile Include="Models\ViewModels\TipoCarroViewModel.cs" />
+    <Compile Include="Models\ViewModels\TipoMotorViewModel.cs" />
+    <Compile Include="Models\ViewModels\UsuarioViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -256,13 +279,24 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\LayOne.cshtml" />
     <Content Include="Views\Carro\Index.cshtml" />
     <Content Include="Views\Carro\Nuevo.cshtml" />
     <Content Include="Views\Carro\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Clientes\" />
+    <Folder Include="Views\Colores\" />
+    <Folder Include="Views\Compras\" />
+    <Folder Include="Views\Deptos\" />
+    <Folder Include="Views\Empleados\" />
+    <Folder Include="Views\Marcas\" />
+    <Folder Include="Views\Paises\" />
+    <Folder Include="Views\Proveedores\" />
+    <Folder Include="Views\TipoCarro\" />
+    <Folder Include="Views\TipoMotor\" />
+    <Folder Include="Views\Usuarios\" />
+    <Folder Include="Views\Ventas\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
