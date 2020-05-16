@@ -13,5 +13,6 @@ namespace ProyectoFinal.Models.ViewModels
         public string Empleado_Direccion { get; set; }
         public int Empleado_Tel { get; set; }
         public int DeptoEmpleado_ID { get; set; }
+        public string DeptoEmpleado_Nombre { get; set; }
     }
 }

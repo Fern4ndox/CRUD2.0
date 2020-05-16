@@ -224,6 +224,7 @@
     <Compile Include="Models\ViewModels\TipoCarroViewModel.cs" />
     <Compile Include="Models\ViewModels\TipoMotorViewModel.cs" />
     <Compile Include="Models\ViewModels\UsuarioViewModel.cs" />
+    <Compile Include="Models\ViewModels\VentaViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -282,21 +283,44 @@
     <Content Include="Views\Carro\Index.cshtml" />
     <Content Include="Views\Carro\Nuevo.cshtml" />
     <Content Include="Views\Carro\Editar.cshtml" />
+    <Content Include="Views\Empleados\Index.cshtml" />
+    <Content Include="Views\Empleados\Nuevo.cshtml" />
+    <Content Include="Views\Empleados\Editar.cshtml" />
+    <Content Include="Views\Marcas\Index.cshtml" />
+    <Content Include="Views\Marcas\Nuevo.cshtml" />
+    <Content Include="Views\Marcas\Editar.cshtml" />
+    <Content Include="Views\Paises\Index.cshtml" />
+    <Content Include="Views\Paises\Nuevo.cshtml" />
+    <Content Include="Views\Paises\Editar.cshtml" />
+    <Content Include="Views\Proveedores\Index.cshtml" />
+    <Content Include="Views\Proveedores\Nuevo.cshtml" />
+    <Content Include="Views\Proveedores\Editar.cshtml" />
+    <Content Include="Views\TipoCarro\Index.cshtml" />
+    <Content Include="Views\TipoCarro\Nuevo.cshtml" />
+    <Content Include="Views\TipoCarro\Editar.cshtml" />
+    <Content Include="Views\TipoMotor\Index.cshtml" />
+    <Content Include="Views\TipoMotor\Nuevo.cshtml" />
+    <Content Include="Views\TipoMotor\Editar.cshtml" />
+    <Content Include="Views\Usuarios\Index.cshtml" />
+    <Content Include="Views\Usuarios\Nuevo.cshtml" />
+    <Content Include="Views\Usuarios\Editar.cshtml" />
+    <Content Include="Views\Deptos\Index.cshtml" />
+    <Content Include="Views\Deptos\Nuevo.cshtml" />
+    <Content Include="Views\Deptos\Editar.cshtml" />
+    <Content Include="Views\Compras\Index.cshtml" />
+    <Content Include="Views\Compras\Nuevo.cshtml" />
+    <Content Include="Views\Compras\Editar.cshtml" />
+    <Content Include="Views\Clientes\Index.cshtml" />
+    <Content Include="Views\Clientes\Nuevo.cshtml" />
+    <Content Include="Views\Clientes\Editar.cshtml" />
+    <Content Include="Views\Shared\_LayoutPage1.cshtml" />
+    <Content Include="Views\Ventas\Index.cshtml" />
+    <Content Include="Views\Ventas\Nuevo.cshtml" />
+    <Content Include="Views\Ventas\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Clientes\" />
     <Folder Include="Views\Colores\" />
-    <Folder Include="Views\Compras\" />
-    <Folder Include="Views\Deptos\" />
-    <Folder Include="Views\Empleados\" />
-    <Folder Include="Views\Marcas\" />
-    <Folder Include="Views\Paises\" />
-    <Folder Include="Views\Proveedores\" />
-    <Folder Include="Views\TipoCarro\" />
-    <Folder Include="Views\TipoMotor\" />
-    <Folder Include="Views\Usuarios\" />
-    <Folder Include="Views\Ventas\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
