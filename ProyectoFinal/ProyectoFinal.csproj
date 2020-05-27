@@ -323,6 +323,11 @@
     <Content Include="Views\Ventas\Nuevo.cshtml" />
     <Content Include="Views\Ventas\Editar.cshtml" />
     <Content Include="Views\Colores\Index.cshtml" />
+    <Content Include="Views\Carro\Upload.cshtml" />
+    <Content Include="Views\Proveedores\Upload.cshtml" />
+    <Content Include="Views\Marcas\Upload.cshtml" />
+    <Content Include="Views\Paises\Upload.cshtml" />
+    <Content Include="Views\Deptos\Upload.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

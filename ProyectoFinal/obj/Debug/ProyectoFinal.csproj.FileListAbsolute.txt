@@ -89,3 +89,4 @@ C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\bin\EntityFramework.
 C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\bin\EntityFramework.SqlServer.xml
 C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\bin\EPPlus.dll
 C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\bin\EPPlus.xml
+C:\Users\Fern4ndox\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csprojAssemblyReference.cache
